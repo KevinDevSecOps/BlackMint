@@ -1,5 +1,4 @@
 
-```markdown
 <div align="center">
   <img src="media/logo.svg" width="300" alt="BlackMint Logo">
 
