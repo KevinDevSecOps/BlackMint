@@ -12,3 +12,7 @@ jobs:
           toolchain: stable
       - run: cargo test --verbose
       - run: cargo build --release
+- name: Build Python extension
+  run: |
+    maturin build --release  # Build para Python
+    cp target/release/libblackmint.so ./py/
