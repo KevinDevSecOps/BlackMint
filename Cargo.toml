@@ -12,3 +12,9 @@ tempfile = "3.3"   # Para tests
 [lib]
 name = "blackmint"
 path = "core/src/lib.rs"
+[lib]
+name = "blackmint"
+crate-type = ["cdylib"]  # Para generar .so/.dll
+
+[dependencies]
+pyo3 = { version = "0.18", features = ["extension-module"] }
