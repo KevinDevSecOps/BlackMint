@@ -6,3 +6,4 @@ build-backend = "maturin"
 name = "blackmint"
 version = "0.1.0"
 requires-python = ">=3.10"
+pip install --editable ./py  # Modo desarrollo
