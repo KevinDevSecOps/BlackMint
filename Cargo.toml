@@ -1,0 +1,14 @@
+[package]
+name = "blackmint-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+rayon = "1.7"      # Paralelismo
+sysinfo = "0.29"   # Detección de hardware
+tempfile = "3.3"   # Para tests
+
+[lib]
+name = "blackmint"
+path = "core/src/lib.rs"
