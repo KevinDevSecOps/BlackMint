@@ -18,3 +18,11 @@ crate-type = ["cdylib"]  # Para generar .so/.dll
 
 [dependencies]
 pyo3 = { version = "0.18", features = ["extension-module"] }
+
+[lib]
+name = "_blackmint"
+crate-type = ["cdylib"]  # Genera .so/.dll
+
+[dependencies.pyo3]
+version = "0.18"
+features = ["extension-module"]
