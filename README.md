@@ -26,7 +26,7 @@ Framework de **seguridad defensiva** escrito en Rust para:
 > *"Porque desaparecer es tan importante como atacar."*  
 
 ---
-
+Purple Team Engineer
 ## 🚀 **Features Destacados**  
 | Módulo          | Descripción                          | Tecnología Usada |  
 |-----------------|--------------------------------------|------------------|  
