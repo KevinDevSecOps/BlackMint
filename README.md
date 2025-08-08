@@ -133,3 +133,47 @@ pyo3 = { version = "0.18", features = ["extension-module"] }
 
 
 ***Purple Team Engineer**
+### 🔵 **Blue Team: Detección y Defensa**  
+Esta sección incluye herramientas para **monitoreo, hardening y respuesta a incidentes**.  
+
+#### 📂 **Estructura**:  
+```bash
+BlueTeam/
+├── 📁 Detection/           # Reglas para SIEM (Sigma, Suricata)
+├── 📁 Hardening/           # Scripts para securear sistemas
+├── 📁 IncidentResponse/    # Herramientas forenses
+└── 📁 ThreatIntel/         # Análisis de IOCs (hashes, dominios maliciosos)
+```
+
+#### 🛡️ **Ejemplo: Regla Sigma para SQL Injection**  
+```yaml
+# Guardar en: BlueTeam/Detection/sql_injection_sigma_rule.yml
+title: SQL Injection Attempt (POST)
+description: Detecta ' OR '1'='1 en parámetros POST
+logsource:
+    category: webserver
+detection:
+    selection:
+        method: POST
+        query: 
+            - "*' OR '1'='1*"
+    condition: selection
+level: high
+```
+
+#### 🔐 **Ejemplo: Hardening Básico en Linux**  
+```bash
+# Guardar en: BlueTeam/Hardening/linux_baseline.sh
+#!/bin/bash
+# Deshabilitar root login via SSH
+sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
+# Habilitar firewall
+sudo ufw enable
+```
+
+#### 🔍 **Cómo Contribuir**  
+1. Añade reglas de detección para nuevos ataques.  
+2. Propón scripts de hardening para Windows/Kubernetes.  
+3. Reporta falsos positivos en reglas existentes.  
+
+--- 
