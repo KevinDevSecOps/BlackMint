@@ -1,0 +1,16 @@
+title: SQL Injection Attempt (POST)
+description: Detecta intentos de SQL Injection en parámetros POST
+status: experimental
+logsource:
+    category: webserver
+detection:
+    selection:
+        method: POST
+        query:
+            - "*'*"
+            - "*/*"
+            - "*=*"
+    condition: selection
+falsepositives:
+    - Aplicaciones legítimas con parámetros complejos
+level: high
